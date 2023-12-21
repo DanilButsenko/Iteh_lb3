@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>LB 3</title>
+        <script src="proccesStudent.js"></script>
+    </head>
+    <body>
+        <h2>Оцінка успішності студентів</h2>
+        <form id="studentForm">
+            <label for="surname">Прізвище: </label>
+            <input type="text" id="surname" required />
+            <br />
+            <label for="grade1">Оцінка 1: </label>
+            <input type="number" id="grade1" min="2" max="5" required />
+            <button type="button" onclick="generateRandomGrade('grade1')">
+                Генерувати
+            </button>
+            <br />
+            <label for="grade2">Оцінка 2: </label>
+            <input type="number" id="grade2" min="2" max="5" required />
+            <button type="button" onclick="generateRandomGrade('grade2')">
+                Генерувати
+            </button>
+            <br />
+            <label for="grade3">Оцінка 3: </label>
+            <input type="number" id="grade3" min="2" max="5" required />
+            <button type="button" onclick="generateRandomGrade('grade3')">
+                Генерувати
+            </button>
+            <br />
+            <label for="grade4">Оцінка 4: </label>
+            <input type="number" id="grade4" min="2" max="5" required />
+            <button type="button" onclick="generateRandomGrade('grade4')">
+                Генерувати
+            </button>
+            <br />
+            <label for="grade5">Оцінка 5: </label>
+            <input type="number" id="grade5" min="2" max="5" required />
+            <button type="button" onclick="generateRandomGrade('grade5')">
+                Генерувати
+            </button>
+            <br />
+            <button type="button" onclick="generateAllGrades()">
+                Генерувати всі оцінки
+            </button>
+            <br />
+            <button type="button" onclick="processStudent()">Обробити</button>
+        </form>
+        <h2>Зведення</h2>
+        <button type="button" onclick="resetAll()">Очистити все</button>
+        <p>Кількість відмінників: <span id="excellentCount">0</span></p>
+        <p>Кількість хорошистів: <span id="goodCount">0</span></p>
+        <p>Кількість неуспішних: <span id="failCount">0</span></p>
+        <h3>Неуспішні студенти:</h3>
+        <ul id="failStudentsList"></ul>
+    </body>
+</html>
